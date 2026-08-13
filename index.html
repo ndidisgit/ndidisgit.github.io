@@ -150,6 +150,11 @@
           <label>Message<textarea name="Message" rows="5" required></textarea></label>
           <button type="submit">Send Message</button>
         </form>
+        <script>
+          window.onload = function() {
+              document.getElementById("form").reset();
+          };
+        </script>
       </div>
     </section>
   </main>
