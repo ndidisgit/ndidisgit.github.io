@@ -142,13 +142,12 @@
             <a href="https://dellsindliving.com">www.dellsindliving.com</a>
           </div>
         </div>
-        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" enctype="text/plain">
+        <form action="https://api.web3forms.com/submit" method="POST">
           <input type="hidden" name="access_key" value="2d6e62d9-c7d0-497e-b3ed-7a391739e45a">
-          <label>Name<input name="Name" type="text" required></label>
-          <label>Phone<input name="Phone" type="tel"></label>
-          <label>Email<input name="Email" type="email" required></label>
-          <label>Message<textarea name="Message" rows="5" required></textarea></label>
-          <button class="btn btn-primary" type="submit">Send Message</button>
+          <input type="text" name="name" required>
+          <input type="email" name="email" required>
+          <textarea name="message" required></textarea>
+          <button type="submit">Submit</button>
         </form>
       </div>
     </section>
