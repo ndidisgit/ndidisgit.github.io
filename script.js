@@ -1,25 +1,14 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const toggle = document.querySelector('.menu-toggle');
-  const nav = document.querySelector('.nav');
-  const form = document.getElementById('form');
+const toggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.nav');
 
-  // Mobile menu
-  if (toggle && nav) {
-    toggle.addEventListener('click', () => {
-      const open = nav.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', String(open));
-    });
+toggle.addEventListener('click', () => {
+  const open = nav.classList.toggle('open');
+  toggle.setAttribute('aria-expanded', open);
+});
 
-    document.querySelectorAll('.nav a').forEach(link => {
-      link.addEventListener('click', () => {
-        nav.classList.remove('open');
-        toggle.setAttribute('aria-expanded', 'false');
-      });
-    });
-  }
-
-  // Reset form when the page loads
-  if (form) {
-    form.reset();
-  }
+document.querySelectorAll('.nav a').forEach(link => {
+  link.addEventListener('click', () => {
+    nav.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  });
 });
